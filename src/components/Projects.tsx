@@ -6,29 +6,29 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const projects = [
   {
     title: "Wilcoinscreen",
-    description: "A cryptocurrency dashboard with real-time data and analytics focusing on user experience and speed.",
-    tags: ["React.js", "Next.js", "Tailwind"],
+    description: "a crypto currency dashboard with real-time data and analytics.",
+    tags: ["React.js", "Next.js"],
     github: "https://github.com/wildanfh/wilcoinscreen",
     live: "https://wilcoinscreen.netlify.app",
   },
   {
     title: "Wildanblog",
-    description: "A minimalist blog platform built with modern web standards and high performance metrics.",
-    tags: ["React.js", "Tailwind CSS", "Lucide"],
+    description: "A simple blog website with a modern design and responsive layout.",
+    tags: ["React.js", "Tailwind CSS"],
     github: "https://github.com/wildanfh/wildanblog",
     live: "https://wildanfhblog.netlify.app",
   },
   {
     title: "Schloss Doner Website",
-    description: "A professional restaurant website featuring responsive navigation and optimized menu displays.",
-    tags: ["React.js", "Tailwind CSS", "Optimization"],
+    description: "A website for a restaurant with a modern design and responsive layout.",
+    tags: ["React.js", "Tailwind CSS"],
     github: "https://github.com/wildanfh/schlossdonersteglitz",
     live: "https://schlossdonersteglitz.netlify.app",
   },
   {
     title: "Movie App",
-    description: "Modern movie discovery application leveraging public APIs for real-time cinematic data.",
-    tags: ["Next.js", "Tailwind CSS", "API"],
+    description: "A movie app with public API and search feature.",
+    tags: ["Next.js", "Tailwind CSS"],
     github: "https://github.com/wildanfh/react-movie",
     live: "https://wildanfh-react-movie.netlify.app/",
   },
@@ -44,47 +44,45 @@ export const Projects = () => {
         {projects.map((project, index) => (
           <Card
             key={index}
-            className="group flex flex-col border-white/50 bg-white/40 backdrop-blur-sm hover:bg-white/60 hover:border-brand-sage hover:shadow-soft transition-all duration-300"
+            className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:border-brand-sage hover:shadow-soft transition-all duration-300 flex flex-col"
           >
-            <CardHeader className="p-5 pb-2">
-              <CardTitle className="text-lg font-bold text-[#131613]">
+            <div className="p-5 flex flex-col flex-grow">
+              <h3 className="text-xl font-bold text-[#131613] mb-1">
                 {project.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-5 pt-0 flex flex-col flex-grow">
-              <p className="text-sm text-[#131613]/70 mb-4 line-clamp-2">
+              </h3>
+              <p className="text-sm text-[#131613]/70 mb-4 flex-grow">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <Badge
                     key={tag}
                     variant="outline"
-                    className="text-[10px] font-semibold px-2 py-0.5 bg-brand-cream/50 text-brand-moss-dark border-brand-sage/30"
+                    className="text-[10px] font-bold px-2 py-1 bg-brand-cream text-brand-moss-dark rounded border-none"
                   >
                     {tag}
                   </Badge>
                 ))}
               </div>
-              <div className="flex items-center gap-4 mt-auto">
+              <div className="flex gap-3 mt-auto">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-brand-moss hover:text-brand-primary-dark inline-flex items-center gap-1.5 transition-colors"
+                  className="text-sm font-medium text-brand-moss hover:text-brand-primary-dark flex items-center gap-1"
                 >
-                  <Code size={14} /> <span>Code</span>
+                  <Code size={16} /> <span>Code</span>
                 </a>
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-brand-moss hover:text-brand-primary-dark inline-flex items-center gap-1.5 transition-colors"
+                  className="text-sm font-medium text-brand-moss hover:text-brand-primary-dark flex items-center gap-1"
                 >
-                  <ExternalLink size={14} /> <span>Live Demo</span>
+                  <ExternalLink size={16} /> <span>Live Demo</span>
                 </a>
               </div>
-            </CardContent>
+            </div>
           </Card>
         ))}
       </div>
