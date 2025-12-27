@@ -38,7 +38,6 @@ export const Projects = () => {
   return (
     <section id="projects" className="scroll-mt-24">
       <div className="flex items-center gap-2 mb-6 px-2">
-        <LayoutGrid className="text-brand-moss w-6 h-6" />
         <h2 className="text-2xl font-bold text-brand-moss-dark">Side Projects</h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
